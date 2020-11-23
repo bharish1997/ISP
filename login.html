@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+            <script src="script.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+        }
+
+        #admin-login {
+            display: none;
+        }
+
+        .login-form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 8%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .form {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+
+        .form i{
+            display: flex;
+            text-align: center;
+            flex-flow: column;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group label {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: -20px;
+            font-size: 20px;
+        }
+
+        .form-group input {
+            outline: none;
+            padding: 15px;
+            width: 300px;
+            background-color: skyblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .checkbox{
+            display: inline-flex;
+            justify-content: center;
+        }
+
+        .form-group button {
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            outline: none;
+            font-weight: bolder;
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 100px;
+            background-color: #93ebeb;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">
+        <i class="fas fa-bolt fa-3x"></i>
+        <a href="index.html">ONWARD</a>
+    </div>
+    <i class="fas fa-home fa-3x" onclick="index()"
+       style="color: darkblue;display:flex;align-items: center;cursor: pointer"></i>
+
+    <div class="login-btn">
+        <button onclick="admin()" style="margin-right: 10px;width: 70px">ADMIN</button>
+        <button onclick="customer()">CUSTOMER</button>
+    </div>
+</div>
+
+<div class="login-form">
+
+<!--  CUSTOMER LOGIN  -->
+    <div id="customer-login">
+        <form action="login.php" class="form" method="POST" onsubmit="return validation()">
+            <i class="fas fa-users fa-3x"></i>
+            <div class="form-group">
+                <label>CUSTOMER ID</label><br>
+                <label>
+                    <input name="userid" placeholder="CUSTOMER ID" type="text">
+                </label>
+            </div>
+            <div class="form-group">
+                <label>PASSWORD</label><br>
+                <label>
+                    <input name="pswd" placeholder="PASSWORD" type="password">
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">
+                </label>
+                <label>Remember Me</label>
+            </div>
+            <div class="form-group">
+                <button name="login" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+<!--  ADMIN LOGIN  -->
+    <div id="admin-login">
+        <form action="login.php" class="form" method="POST" onsubmit="return validation()">
+            <i class="fas fa-user fa-3x"></i>
+            <div class="form-group">
+                <label>EMPLOYEE ID</label><br>
+                <label>
+                    <input name="empid" placeholder="EMPLOYEE ID" type="text">
+                </label>
+            </div>
+            <div class="form-group">
+                <label>PASSWORD</label><br>
+                <label>
+                    <input name="pswd" placeholder="PASSWORD" type="password">
+                </label>
+            </div>
+            <div class="form-group">
+                <button name="admin_login" type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

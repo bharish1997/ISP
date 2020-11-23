@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+        body{
+            display: flex;
+        }
+
+        .login-form{
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            align-items: center;
+        }
+
+        .login-form h1{
+            display: flex;
+            margin: auto;
+            letter-spacing: 5px;
+            font-size: 45px;
+        }
+
+        .form{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group{
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .form-group label{
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .form-group input{
+            display: flex;
+            padding: 15px;
+            width: 300px;
+            background-color: skyblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .form-group button{
+            font-weight: bolder;
+            padding: 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 100px;
+            background-color: #93ebeb;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+        <div class="logo">
+            <i class="fas fa-bolt fa-3x"></i>
+            <a href="index.html">ONWARD</a>
+
+        </div>
+            <i class="fas fa-home fa-3x" onclick="index()" style="color: darkblue;display:flex;align-items: center;cursor: pointer"></i>
+    <div class="login-btn">
+            <button style="margin-right: 10px;width: 70px" onclick="admin()">ADMIN</button>
+            <button onclick="customer()">CUSTOMER</button>
+        </div>
+    </div>
+
+<div class="login-form">
+    <h1>LOGIN</h1>
+  <form class="form" action = "admin.php" onsubmit = "return validation()" method = "POST">
+    <div class="form-group">
+        <label>EMPLOYEE ID</label><br>
+        <input type="text" placeholder="EMPLOYEE ID" name="empid">
+    </div>
+    <div class="form-group">
+        <label>PASSWORD</label><br>
+         <input type="password" placeholder="PASSWORD" name="pswd">
+    </div>
+    <div class="form-group">
+        <button type="submit">SUBMIT</button>
+    </div>
+  </form>
+</div>
+
+    <script>
+            function validation() {
+                var id = document.f1.email.value;
+                var ps = document.f1.pswd.value;
+                if (id.length === "" && ps.length === "") {
+                    alert("User Name and Password fields are empty");
+                    return false;
+                } else {
+                    if (id.length === "") {
+                        alert("User Name is empty");
+                        return false;
+                    }
+                    if (ps.length === "") {
+                        alert("Password field is empty");
+                        return false;
+                    }
+                }
+            }
+
+       function index() {
+        window.location="index.html";
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+        <script src="../script.js"></script>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../dashboard.css">
+
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <i class="fas fa-bolt fa-3x"></i>
+        <h1>ONWARD</h1>
+
+    </div>
+    <div class="logout">
+    <form method="POST" action="../customer.php">
+       <button type="submit" name="logout"><i class="fas fa-power-off fa-3x"></i></button>
+     </form>
+    </div>
+</div>
+<div class="login-name" style="box-shadow: 3px 3px lightgrey;z-index: 1">
+
+    <h3>Hello Harry</h3>
+</div>
+
+<div class="dash-cont">
+        <div class="side-menu">
+            <ul>
+                <li onclick="profile()">PROFILE</li>
+                <li onclick="usage()">USAGE</li>
+                <li onclick="myplan()">MY PLANS</li>
+                <li onclick="cc()">CUSTOMER CARE</li>
+            </ul>
+        </div>
+    <div class="main-cont">
+        <div id="profile">
+            <h1>PROFILE</h1>
+            <table class="profile-table">
+                <tr>
+                    <td><b>USER ID:</b> C001</td>
+                    <td><b>FIRST NAME:</b> HARISH</td>
+                    <td><b>LAST NAME:</b> BALASUBRAMANI</td>
+                </tr>
+                <tr>
+                    <td><b>AGE:</b> 23</td>
+                    <td><b>GENDER:</b> MALE</td>
+                </tr>
+                <tr>
+                    <td><b>ADDRESS:</b> NO:17, street, nager, area</td>
+                    <td><b>CITY:</b> CHENNAI</td>
+                    <td><b>STATE:</b> TAMIL NADU</td>
+                </tr>
+                <tr>
+                    <td><b>MOBILE NO:</b> 9093482765</td>
+                    <td><b>EMAIL ID:</b> harry@gmail.com</td>
+
+                </tr>
+            </table>
+        </div>
+        <div id="usage">
+            <h1>USAGE</h1>
+
+        </div>
+        <div id="myplan">
+            <h1>MY PLANS</h1>
+            <h3>Plan Name: BASIC</h3>
+            <h3>Plan Started on: 02/09/2000</h3>
+            <h3>Plan Expires on: 02/10/2000</h3>
+        </div>
+        <div id="cc">
+            <h1>CUSTOMER CARE</h1>
+            <table>
+                <tr>
+                    <td>
+                    <h3>EMAIL</h3>
+                    <h5>Technician: techician@onward.com</h5>
+                    <h5>Complaints: complaints@onward.com</h5>
+                    <h5>Head Office: headoffice@onward.com</h5>
+                    </td>
+
+                <td>
+                    <h3>Phone Number</h3>
+                    <h5>Technician: 044-234785</h5>
+                    <h5>Complaints: 044-3764927</h5>
+                    <h5>Head Office: 044-94872648</h5>
+                </td>
+                <td>
+                    <h3>OFFICE Address</h3>
+                    <h5>No:7</h5>
+                    <h5>Dubai Kuruku Sandhu,</h5>
+                    <h5>Dubai Main Road,</h5>
+                    <h5>Dubai.</h5>
+                </td>
+                </tr>
+                </table>
+        </div>
+    </div>
+</div>
+
+<script>
+
+function logout(){
+    window.location="login.html";
+}
+
+   function profile() {
+        document.getElementById("profile").style.display="flex";
+        document.getElementById("usage").style.display="none";
+        document.getElementById("myplan").style.display="none";
+        document.getElementById("cc").style.display="none";
+    }
+
+    function usage() {
+        document.getElementById("profile").style.display="none";
+        document.getElementById("usage").style.display="flex";
+        document.getElementById("myplan").style.display="none";
+        document.getElementById("cc").style.display="none";
+    }
+
+    function myplan() {
+        document.getElementById("profile").style.display="none";
+        document.getElementById("usage").style.display="none";
+        document.getElementById("myplan").style.display="flex";
+        document.getElementById("cc").style.display="none";
+    }
+    function cc() {
+        document.getElementById("profile").style.display="none";
+        document.getElementById("usage").style.display="none";
+        document.getElementById("myplan").style.display="none";
+        document.getElementById("cc").style.display="flex";
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* HEADER */
+.header{
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.logo i{
+    display: flex;
+    color: red;
+    align-items: center;
+}
+
+.logout{
+    display: flex;
+    color: green;
+    margin-left: auto;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.logout form,button{
+    outline: none;
+    color: red;
+    display: flex;
+    border: none;
+    background-color: whitesmoke;
+}
+
+
+/*  body  */
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.login-name{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    height: 1cm;
+    background-color: lightskyblue;
+}
+
+.login-name h3{
+    margin-top: 10px;
+}
+
+.dash-cont{
+    display: flex;
+}
+
+.side-menu{
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex: 0.7;
+    background-color: #112436;
+    height: 100vh;
+    justify-content: center;
+    box-shadow: 10px 0 10px -10px black;
+}
+
+.side-menu ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.side-menu ul li{
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+.side-menu li:hover{
+    background-color: ghostwhite;
+    color: black;
+}
+
+
+.main-cont{
+    display: flex;
+    flex: 3;
+    justify-content: center;
+}
+
+#view{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#view h1{
+    display: flex;
+    align-content: center;
+}
+
+#view table{
+    margin-left: -33%;
+    margin-top: 100px;
+    overflow: auto;
+    padding-right: 10px;
+    display: inline-block;
+    position: absolute;
+    width: 75vw;
+    height: 30vh;
+    border-collapse: collapse;
+}
+#view table th{background-color: indianred;}
+
+#view table tr,th{
+    border-collapse: collapse;
+    border: 2px solid black;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+#view table td{
+    border: 2px solid black;
+    font-family: 'Roboto', sans-serif;
+    padding: 2px;
+}
+
+
+
+#add{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.add-form table{
+    margin-left: 40px;
+    overflow: auto;
+    display: inline-block;
+    width: 90%;
+    height: 60vh;
+    border-collapse: collapse;
+}
+.add-form input,select,textarea{
+    margin-top: 5%;
+    padding:3%;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    background-color: darkslateblue;
+    border: none;
+}
+
+.add-form textarea{
+    height: 50px;
+    width: 200px;
+}
+
+
+#edit{
+    display: none;
+}
+
+#del{
+    display: none;
+}
+
+            /* CUSTOMER DASHBOARD */
+#profile{
+     display: flex;
+    flex-direction: column;
+}
+
+#profile h1{
+    display: flex;
+    padding-left: 25vw;
+    padding-bottom: 30px;
+}
+
+.profile-table tr,th,td{
+    font-size: 16px;
+    padding-bottom: 40px;
+    padding-right: 5vw;
+    flex-wrap: wrap;
+    width: 20vw;
+    font-family: 'Roboto', sans-serif;
+}
+.profile-table td:nth-child(1){
+    padding-left: 0;
+    width: 20vw;
+    padding-right: 20px;
+}
+
+#usage{
+ display: none;
+  padding-left: 20px;
+}
+
+#myplan{
+    display: none;
+    padding-left:20px;
+    flex-direction: column;
+}
+
+#myplan h1{
+    padding-bottom: 30px;
+}
+#myplan h3{
+    display: flex;
+    margin-left: -25vw;
+}
+
+#cc{
+    display: none;
+    padding-left: 20px;
+    flex-direction: column;
+}
+
+#cc h1{
+    display: flex;
+    padding-left: 20vw;
+    padding-bottom: 30px;}
